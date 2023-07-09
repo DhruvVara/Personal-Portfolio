@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@1&family=Raleway:wght@800&display=swap');
+
+.front_page_container {
+    height: 89vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(20, 20, 19);
+    overflow: auto;
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 111;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.details .name {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: rgb(217, 218, 220);
+    text-shadow: 3px 3px 5px black;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 3px;
+}
+
+.details .web_dev {
+    font-size: 17.5px;
+    color: rgb(58, 58, 60);
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(254, 254, 254,0.5);
+    padding: 0 3px;
+    border-radius: 5px;
+    /* font-weight: bold; */
+}
+
+.details .quote {
+    color: rgb(58, 58, 60);
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(254, 254, 254,0.5);
+    padding: 0 3px;
+    border-radius: 5px;
+}
+
+.content_photo img {
+    height: 550px;
+    filter: brightness(0.3) opacity(0.6);
+}
+
+.s_handle{
+    position: absolute;
+    left: 0;
+    bottom: 2%;
+    height: auto;
+    width: auto;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+}
+
+.s_handle img{
+    height: 5.5vh;
+    width: auto;
+    margin: 10px;
+    filter: drop-shadow(0 0 3px rgb(5, 5, 5));
+    transition: 0.3s;
+}
+
+.s_handle img:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 3px white);
+}
+
+
+
+/* media queries */
+
+@media only screen and (min-width: 1700px) {
+    /* .details {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 111;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    } */
+
+    .details .name {
+        font-size: 50px;
+        /* font-weight: 600;
+        color: rgb(217, 218, 220);
+        font-family: 'Raleway', sans-serif; */
+    }
+
+    .details .web_dev {
+        font-size: 25px;
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+    }
+
+    .details .quote {
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+        font-size: 22px;
+    }
+
+    .content_photo img {
+        height: 690px;
+        /* filter: brightness(0.3) opacity(0.6); */
+    }
+}
+
+
+
+@media only screen and (max-width: 1500px) {
+    /* .details {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 111;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    } */
+
+    .details .name {
+        font-size: 44px;
+        /* font-weight: 600;
+        color: rgb(217, 218, 220);
+        font-family: 'Raleway', sans-serif; */
+    }
+
+    .details .web_dev {
+        font-size: 20px;
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+    }
+
+    .details .quote {
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+        font-size: 17px;
+    }
+
+    .content_photo img {
+        height: 580px;
+        /* filter: brightness(0.3) opacity(0.6); */
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    /* .details {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 111;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    } */
+
+    .details .name {
+        font-size: 42px;
+        /* font-weight: 600;
+        color: rgb(217, 218, 220);
+        font-family: 'Raleway', sans-serif; */
+    }
+
+    .details .web_dev {
+        font-size: 18px;
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+    }
+
+    .details .quote {
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+        font-size: 16px;
+    }
+
+    .content_photo img {
+        height: 550px;
+        /* filter: brightness(0.3) opacity(0.6); */
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    /* .details {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 111;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    } */
+
+    .details .name {
+        font-size: 42px;
+        /* font-weight: 600;
+        color: rgb(217, 218, 220);
+        font-family: 'Raleway', sans-serif; */
+    }
+
+    .details .web_dev {
+        font-size: 18px;
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+    }
+
+    .details .quote {
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+        font-size: 16px;
+    }
+
+    .content_photo img {
+        height: 520px;
+        /* filter: brightness(0.3) opacity(0.6); */
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .details .name {
+        font-size: 38px;
+        /* font-weight: 600;
+        color: rgb(217, 218, 220);
+        font-family: 'Raleway', sans-serif; */
+    }
+
+    .details .web_dev {
+        font-size: 17px;
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+    }
+
+    .details .quote {
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+        /* font-size: 16px; */
+    }
+
+    .content_photo img {
+        height: 470px;
+        /* filter: brightness(0.3) opacity(0.6); */
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    .details .name {
+        font-size: 35px;
+        /* font-weight: 600;
+        color: rgb(217, 218, 220);
+        font-family: 'Raleway', sans-serif; */
+    }
+
+    .details .web_dev {
+        font-size: 16px;
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+    }
+
+    .details .quote {
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+        font-size: 15px;
+    }
+
+    .content_photo img {
+        height: 450px;
+        /* filter: brightness(0.3) opacity(0.6); */
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    .details .name {
+        font-size: 30px;
+        /* font-weight: 600;
+        color: rgb(217, 218, 220);
+        font-family: 'Raleway', sans-serif; */
+    }
+
+    .details .web_dev {
+        font-size: 15px;
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+    }
+
+    .details .quote {
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .content_photo img {
+        height: 430px;
+        /* filter: brightness(0.3) opacity(0.6); */
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    .details .name {
+        font-size: 28px;
+        /* font-weight: 600;
+        color: rgb(217, 218, 220);
+        font-family: 'Raleway', sans-serif; */
+    }
+
+    .details .web_dev {
+        font-size: 14px;
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+    }
+
+    .details .quote {
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .content_photo img {
+        height: 400px;
+        /* filter: brightness(0.3) opacity(0.6); */
+    }
+}
+
+@media only screen and (max-width: 370px) {
+
+    .details .name {
+        font-size: 26px;
+        /* font-weight: 600;
+        color: rgb(217, 218, 220);
+        font-family: 'Raleway', sans-serif; */
+        letter-spacing: 1px;
+    }
+
+    .details .web_dev {
+        font-size: 12px;
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+    }
+
+    .details .quote {
+        /* color: rgb(58, 58, 60);
+        font-family: 'Nunito', sans-serif; */
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .content_photo img {
+        height: 380px;
+        /* filter: brightness(0.3) opacity(0.6); */
+    }
+}

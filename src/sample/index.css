@@ -1,0 +1,33 @@
+body{
+    font-family: arial;
+    font-size: 16px;
+    margin: 0;
+    background-color: #000;
+    min-width: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.wrapper{
+display: flex;
+flex-wrap: nowrap;
+}
+
+.section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(4, 85, 123, 0.45);
+    background-size: cover;
+}
+
+.section h2{
+    color: #fff;
+    font-size: 100px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
