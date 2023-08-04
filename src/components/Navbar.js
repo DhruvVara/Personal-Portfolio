@@ -3,6 +3,8 @@ import "./Navbar.css";
 import { gsap, Power1 } from "gsap";
 import axios from "axios";
 
+const host = "";
+
 const Navbar = () => {
     // let timeline=gsap.timeline();
     let list = useRef(null);
@@ -28,23 +30,25 @@ const Navbar = () => {
         setinput({ ...input, [e.target.name]: e.target.value });
     }
 
-    const handlesubmit = (e) => {
+    const handlesubmit = async (e) => {
         e.preventDefault();
 
-        // console.log(input);
-        axios.post('http://localhost:3001/api/contact', {
-            name: input.username,
-            email: input.email,
-            description: input.description
-        })
+            const res = await axios.post(`${host}/api/contact`, {
+                name: input.username,
+                email: input.email,
+                description: input.description
+            })
 
-        if (Response) {
-            alert("seccessfully submitted")
-        }
+            if (res) {
+                alert("seccessfully submitted")
+            }
 
-        setinput({ username: "", email: "", description: "" })
-        setview(false)
+            setinput({ username: "", email: "", description: "" })
+            setview(false)
+        
+
     }
+
 
     const handlecontact = () => {
         if (!view) {
@@ -52,14 +56,9 @@ const Navbar = () => {
             setmenu(false)
         }
 
-        // gsap.fromTo("contact",{
-        //     opacity:0,
-        //     duration:2
-        // },{
-        //     opacity:1
-        // })
     }
 
+    // for menu bar
     const handleclick = () => {
         if (menu) {
             setmenu(false)
@@ -68,19 +67,26 @@ const Navbar = () => {
         }
     }
 
+    const handleclose = () => {
+        setinput({ username: "", email: "", description: "" })
+        setview(false)
+
+    }
+
 
 
     return (
         <>
             <div className="main_navbar " >
                 <div className="left_nav">
-                    <div className="logo" ref={el => logo = el}>LOGO</div>
+                    {/* <div className="logo" ref={el => logo = el}></div> */}
+                    <img src="./image/name_logo.png" alt="logo..." className="logo" ref={el => logo = el} />
                 </div>
 
                 <div className={`right_nav ${!menu ? "close_nav" : ""}`}>
                     <ul ref={el => list = el}>
-                        <li ><a href="Resume.pdf" download="Resume.pdf" onClick={() =>  setmenu(false)} >Resume</a></li>
-                        <li ><a onClick={() => handlecontact()}>Contact</a></li>
+                        <li ><a href="Resume.pdf" download="Resume.pdf" onClick={() => setmenu(false)} >Resume</a></li>
+                        <li onClick={() => handlecontact()}>Contact</li>
                     </ul>
                 </div>
 
@@ -90,22 +96,23 @@ const Navbar = () => {
                         <div className="line"></div></>}
                 </div>
 
-                <form onSubmit={handlesubmit} className={`contact ${view ? 'cant' : ""} `}>
+                <div className={`backfilter ${view ? "backfilter_opn" : ""}`}>
+                </div>
+                <form onSubmit={handlesubmit} className={`contact ${view ? 'cant' : ""} `} >
                     <div className="form">
                         <h1>Contact Me</h1>
                         <div className="center">
 
                             <div className="nme detail">
-                                <label className="label" htmlfor="username">Name</label>
-                                <input type="text" name="username" value={input.username} id="nme" className="input" onChange={handlechange} autoComplete="off" required />
+                                <label className="label" htmlFor="username">Name</label>
+                                <input type="text" name="username" value={input.username} id="nme" className="input" onChange={handlechange} autoComplete="off"  required/>
                             </div>
                             <div className="email detail">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" value={input.email} className="input" onChange={handlechange} autoComplete="off" required />
+                                <label htmlFor="email">Email</label>
+                                <input type="email" name="email" value={input.email} className="input" onChange={handlechange} autoComplete="off"  required/>
                             </div>
                             <div className="description detail">
-                                <label for="description">Description</label>
-                                {/* <input type="text" name="description" className="input" required /> */}
+                                <label htmlFor="description">Description</label>
                                 <textarea className="input textarea" name="description" value={input.description} rows="5" onChange={handlechange} autoComplete="off" required />
                             </div>
                         </div>
@@ -113,9 +120,10 @@ const Navbar = () => {
 
                     <div className="btn_space">
                         <button className="send btn" type="submit">Send</button>
-                        <button className="close btn" onClick={() => setview(false)}>Close</button>
+                        <button className="close btn" onClick={handleclose}>Close</button>
                     </div>
                 </form>
+
             </div>
         </>
     )

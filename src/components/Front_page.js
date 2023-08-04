@@ -4,12 +4,12 @@ import { gsap, Power1 } from "gsap";
 
 const s_handles = [
     {
-        name: "github",
+        name: "Git&Github",
         link: "https://github.com/DhruvVara"
     },
     {
-        name: "linkedin",
-        link: "www.linkedin.com/in/dhruv-vara-681ba0213"
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/dhruv-vara-681ba0213/"
     }
 ]
 
@@ -82,12 +82,12 @@ const Front_page = () => {
             </div>
 
             <div className="content_photo">
-                <img src='image/main_page_photo.png' ref={el => imge = el} />
+                <img src='image/main_page_photo.png' alt="main_img" ref={el => imge = el} />
             </div>
             <div className="s_handle">
-                {s_handles.map((item) => {
+                {s_handles.map((item,i) => {
                     return (
-                        <a className="social_handles_img" href={item.link} rel="noreferrer" target="_blank"><img src={`image/${item.name}.svg`} /></a>
+                        <a key={i} className="social_handles_img" href={item.link} rel="noreferrer" target="_blank" ><img alt={`${item.name}`} src={`image/${item.name}.svg`} /></a>
 
                     )
                 })}

@@ -2,7 +2,7 @@ import React from 'react';
 import "./Skills.css";
 
 const name = [
-    "html","css", "javascript","reactjs", "mongo db","java","python","mysql","express js","nodejs","rest api","github"
+    "HTML","CSS", "Javascript","Reactjs", "Mongo db","Java","Mysql","Express js","Nodejs","Rest API","Git&Github"
 ]
 
 

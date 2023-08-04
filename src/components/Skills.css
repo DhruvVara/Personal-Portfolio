@@ -331,20 +331,21 @@
         position: relative;
     } */
 
-    /* .skills .skills_left::after{
-        content: '';
+    .skills .skills_left::after{
+        top: 15%;
+        /* content: '';
         position: absolute;
         top: 2.5rem;
         right: 0;
         height: 15rem;
         width: 2px;
         background-color: rgb(20, 20, 19);
-        border-radius: 25%;
-    } */
+        border-radius: 25%; */
+    }
 
 
     .skills_left .skill_name {
-        margin-top: 250%;
+        margin-top: 200%;
         /* transform: rotate(-90deg);
         display: inline-block;
         font-size: 1.5rem;
@@ -456,20 +457,21 @@
         position: relative; */
     }
 
-    /* .skills .skills_left::after{
-        content: '';
+    .skills .skills_left::after{
+        top: 15%;
+        /* content: '';
         position: absolute;
         top: 2.5rem;
         right: 0;
         height: 15rem;
         width: 2px;
         background-color: rgb(20, 20, 19);
-        border-radius: 25%;
-    } */
+        border-radius: 25%; */
+    }
 
 
     .skills_left .skill_name {
-        margin-top: 280%;
+        margin-top: 250%;
         /* transform: rotate(-90deg);
         display: inline-block;
         font-size: 1.5rem;
@@ -541,7 +543,8 @@
     }
 
     .skill_box p {
-        font-size: 1.2em;
+        font-size: 1.1em;
+        /* top: 10%; */
         /* height: var(--mid_p);
         color: rgb(20, 20, 19);
         display: flex;
@@ -579,6 +582,7 @@
 
     .skills .skills_left::after {
         height: 13rem;
+        top: 20%;
         /* content: '';
         position: absolute;
         top: 2.5rem;
@@ -591,7 +595,7 @@
 
     .skills_left .skill_name {
         font-size: 1.3rem;
-        margin-top: 350%;
+        margin-top: 250%;
         /* transform: rotate(-90deg);
         display: inline-block;
         font-family: 'Nunito', sans-serif;
@@ -663,7 +667,7 @@
     }
 
     .skill_box p {
-        font-size: 1.15em;
+        font-size: 1em;
         /* height: var(--mid_p);
         background-color: aquamarine; */
         /* color: rgb(20, 20, 19);
@@ -1017,7 +1021,7 @@
     }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 440px) {
     /* .skill_container {
         height: 100vh;
         width: 100%;
@@ -1037,7 +1041,7 @@
     }
 
     .skill_box h1 {
-        font-size: 1.3em;
+        font-size: 0.9em;
         height: 6%;
         /* background-color: aquamarine; */
         /* padding-top: 5px;

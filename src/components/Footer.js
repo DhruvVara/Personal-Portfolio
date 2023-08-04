@@ -3,12 +3,12 @@ import "./Footer.css";
 
 const social_handles=[
   {
-    name:"github",
+    name:"Git&Github",
     link:"https://github.com/DhruvVara"
   },
   {
-    name:"linkedin",
-    link:"https://github.com/DhruvVara"
+    name:"Linkedin",
+    link:"https://www.linkedin.com/in/dhruv-vara-681ba0213/"
   }
 ]
 
@@ -29,9 +29,9 @@ function Footer() {
         <h4>Have a nice {days[day]}.</h4>
         <div className='social_handles'>
           Social Handle:
-          {social_handles.map((item)=>{
+          {social_handles.map((item,i)=>{
             return(
-              <a href={item.link} rel="noreferrer" target="_blank"><img src={`image/${item.name}.svg`} /></a>
+              <a href={item.link} key={i} rel="noreferrer" target="_blank"><img alt={item.name} src={`image/${item.name}.svg`} /></a>
 
             )
           })}
